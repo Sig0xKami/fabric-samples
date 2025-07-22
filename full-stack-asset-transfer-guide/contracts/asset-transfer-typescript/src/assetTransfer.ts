@@ -51,7 +51,7 @@ export class AssetTransferContract extends Contract {
     async #readAsset(ctx: Context, id: string): Promise<Uint8Array> {
         const assetBytes = await ctx.stub.getState(id); // get the asset from chaincode state
         if (assetBytes.length === 0) {
-            throw new Error(`Sorry, asset ${id} has not been created`);
+            throw new Error(`Disculpa, el asset ${id} no fue creado`);
         }
 
         return assetBytes;
